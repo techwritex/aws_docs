@@ -1,2 +1,2 @@
 # aws_docs
-AWS documentation
+Tutorials based on AWS documentation.
