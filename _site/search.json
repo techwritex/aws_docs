@@ -1,0 +1,112 @@
+[
+
+
+
+
+{
+"title": "Создание корзины",
+"tags": "",
+"keywords": "",
+"url": "create-bucket.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Создание кластера",
+"tags": "",
+"keywords": "",
+"url": "create-cluster.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Создание роли",
+"tags": "",
+"keywords": "",
+"url": "create-role.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Создание пользователя",
+"tags": "",
+"keywords": "",
+"url": "create-user.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Примеры оформления документации",
+"tags": "",
+"keywords": "",
+"url": "index.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Подключение к кластеру и выполнение запросов",
+"tags": "",
+"keywords": "",
+"url": "run-queries.html",
+"summary": ""
+}
+,
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+"title": "Sample post",
+"tags": "newsgetting_started",
+"keywords": "",
+"url": "samplepost.html",
+"summary": "This is some summary frontmatter for my sample post."
+}
+,
+
+
+{
+"title": "Welcome to Jekyll!",
+"tags": "news",
+"keywords": "",
+"url": "myupdate.html",
+"summary": ""
+}
+,
+
+
+{
+"title": "Test post from last year",
+"tags": "news",
+"keywords": "",
+"url": "test-post-from-last-year.html",
+"summary": ""
+}
+
+
+
+]
