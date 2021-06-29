@@ -39,29 +39,29 @@ entries:
   #     output: web
 
   - title: Создание пользователя 
-    url: /create-user.html
+    url: /aws_docs/create-user.html
     output: web
 
   - title: Создание роли
-    url: /create-role.html
+    url: /aws_docs/create-role.html
     output: web
 
   - title: Создание корзины S3
-    url: /create-s3-bucket.html
+    url: /aws_docs/create-s3-bucket.html
     output: web
   
   - title: Создание кластера
-    url: /create-cluster.html
+    url: /aws_docs/create-cluster.html
     output: web
   
   - title: Подключение к кластеру и выполнение запросов
-    url: /run-queries.html
+    url: /aws_docs/run-queries.html
     output: web
 
   - title: Загрузка данных из Amazon S3
-    url: /load-data-from-s3.html
+    url: /aws_docs/load-data-from-s3.html
     output: web
 
   - title: Удаление кластера
-    url: /delete-cluster.html
+    url: /aws_docs/delete-cluster.html
     output: web
