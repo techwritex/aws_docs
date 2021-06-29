@@ -6,8 +6,9 @@
   {% for folder in entry.folders %}
   {% if folder.output contains "web" %}
   <li>
-      <a title="{{folder.title}}" href="#">{{folder.title}}</a>
-      <ul>
+      <!-- <a title="{{folder.title}}" href="#">{{folder.title}}</a> -->
+      <a title="{{folder.title}}" href="{{folder.url}}">{{folder.title}}</a>
+      <!-- <ul>
           {% for folderitem in folder.folderitems %}
           {% if folderitem.output contains "web" %}
           {% if folderitem.external_url %}
@@ -42,7 +43,7 @@
           {% endfor %}
           {% endif %}
           {% endfor %}
-      </ul>
+      </ul> -->
    </li>
      {% endif %}
       {% endfor %}
@@ -55,4 +56,5 @@
 </ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
+<!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
+<script>$("li.active").toggleClass("active");</script>

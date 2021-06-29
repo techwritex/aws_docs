@@ -1,9 +1,9 @@
 .summary {
     color: #808080;
-    border-left: 5px solid #E50E51;
+    /* border-left: 5px solid #E50E51; */
+    border-left: 5px solid #e86a23;
     font-size:16px;
 }
-
 
 /* h3 {color: #67a246; } */
 h3 {color: #000000; }
@@ -53,7 +53,8 @@ a[data-toggle="tooltip"] {
 .navbar-inverse {
     /* background-color: #72ac4a; */
     background-color: #000000;
-    border-color: #5b893c;
+    /* border-color: #5b893c; */
+    border-color: #000000;
 }
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {

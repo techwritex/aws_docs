@@ -3,10 +3,10 @@ repository: techwritex/aws_docs
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Техническая документация 
+topnav_title: Пример технической документации 
 # this appears on the top navigation bar next to the home button
 
-site_title: Примеры технической документации
+site_title: Пример технической документации 
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Владимир Юсупов

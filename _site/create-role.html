@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="В разделе представлена последовательность шагов по созданию роли для Amazon Redshift с помощью сервиса по управлению доступом (IAM). Обозначенная роль позвол...">
 <meta name="keywords" content=" ">
-<title>Создание роли | Примеры технической документации</title>
+<title>Создание роли | Пример технической документации</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -107,7 +107,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Техническая документация</span></a>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Пример технической документации</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -225,68 +225,76 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">Документация AWS </li>
+  <li class="sidebarTitle">Руководство разработчика </li>
   
   
   
   <li>
-      <a title="IAM" href="#">IAM</a>
-      <ul>
+      <!-- <a title="Создание пользователя" href="#">Создание пользователя</a> -->
+      <a title="Создание пользователя" href="/create-user.html">Создание пользователя</a>
+      <!-- <ul>
           
-          
-          
-          <li><a title="Создание пользователя" href="create-user.html">Создание пользователя</a></li>
-          
-          
-          
-          
-          
-          
-          <li class="active"><a title="Создание роли для Redshift" href="create-role.html">Создание роли для Redshift</a></li>
-          
-          
-          
-          
-      </ul>
+      </ul> -->
    </li>
      
       
   
   <li>
-      <a title="S3" href="#">S3</a>
-      <ul>
+      <!-- <a title="Создание роли" href="#">Создание роли</a> -->
+      <a title="Создание роли" href="/create-role.html">Создание роли</a>
+      <!-- <ul>
           
-          
-          
-          <li><a title="Создание корзины" href="create-bucket.html">Создание корзины</a></li>
-          
-          
-          
-          
-      </ul>
+      </ul> -->
    </li>
      
       
   
   <li>
-      <a title="Redshift" href="#">Redshift</a>
-      <ul>
+      <!-- <a title="Создание корзины S3" href="#">Создание корзины S3</a> -->
+      <a title="Создание корзины S3" href="/create-s3-bucket.html">Создание корзины S3</a>
+      <!-- <ul>
           
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Создание кластера" href="#">Создание кластера</a> -->
+      <a title="Создание кластера" href="/create-cluster.html">Создание кластера</a>
+      <!-- <ul>
           
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Подключение к кластеру и выполнение запросов" href="#">Подключение к кластеру и выполнение запросов</a> -->
+      <a title="Подключение к кластеру и выполнение запросов" href="/run-queries.html">Подключение к кластеру и выполнение запросов</a>
+      <!-- <ul>
           
-          <li><a title="Создание кластера" href="create-cluster.html">Создание кластера</a></li>
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Загрузка данных из Amazon S3" href="#">Загрузка данных из Amazon S3</a> -->
+      <a title="Загрузка данных из Amazon S3" href="/load-data-from-s3.html">Загрузка данных из Amazon S3</a>
+      <!-- <ul>
           
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Удаление кластера" href="#">Удаление кластера</a> -->
+      <a title="Удаление кластера" href="/delete-cluster.html">Удаление кластера</a>
+      <!-- <ul>
           
-          
-          
-          
-          
-          <li><a title="Подключение к кластеру и выполнение запросов" href="run-queries.html">Подключение к кластеру и выполнение запросов</a></li>
-          
-          
-          
-          
-      </ul>
+      </ul> -->
    </li>
      
       
@@ -299,7 +307,8 @@
 </ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
+<!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
+<script>$("li.active").toggleClass("active");</script>
 
             </div>
             
@@ -315,6 +324,8 @@
 
 <div class="post-content">
 
+   
+    <div class="summary">В разделе представлена последовательность шагов по созданию роли для Amazon Redshift с помощью сервиса по управлению доступом (IAM). Обозначенная роль позволяет кластеру Amazon Redshift обращаться к сервису Amazon S3 для загрузки данных.</div>
    
 
     
@@ -343,15 +354,61 @@ $('#toc').on('click', 'a', function() {
     
 
 
-   <h2 id="step-i">step I</h2>
+   <ol>
+  <li>
+    <p>Войдите в консоль управления IAM (если вышли из неё после выполнения предыдущего шага):</p>
 
-<p>some text</p>
+    <p><a href="https://console.aws.amazon.com/iam">https://console.aws.amazon.com/iam</a></p>
+  </li>
+  <li>
+    <p>В навигационной панели домашней страницы IAM перейдите в раздел “Roles” (Роли) и нажмите кнопку “Create role” (Создать роль):</p>
 
-<h2 id="step-ii">step II</h2>
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_2.jpg" alt="Создание роли в IAM" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>Перейдите в группу “AWS service” и выберите “Redshift”:</p>
 
-<p>some text</p>
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_3.jpg" alt="Настройки роли в IAM" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>В разделе “Select your use case” выберите пункт “Redshift - Customizable” и нажмите кнопку “Next: Permissions” для добавления полномочий:</p>
+
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_4.jpg" alt="Настройки роли в IAM" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>В поле поиска укажите название политики “AmazonS3ReadOnlyAccess” (для загрузки данных из S3), отметьте чекбокс выбранной политики, оставьте настройки разрешений (Set permissions boundary) по-умолчанию и нажмите кнопку “Next: Tags”:</p>
+
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_5.jpg" alt="Полномочия для загрузки данных из Amazon S3" /><figcaption></figcaption></figure>
+
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_6.jpg" alt="Полномочия для загрузки данных из Amazon S3" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>Укажите необходимое количество тегов, которые состоят из ключей и значений. Например, ключ - environment (среда) и значение - development (разработка). Нажмите кнопку “Next: Review” (или же пропустите шаг добавления тегов, сразу нажав кнопку “Next: Review”):</p>
+
+    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Примечание:</b> добавление тегов является необязательным действием. Однако, теги могут быть полезны во некоторых ситуациях. Например, с помощью них можно анализировать расходы денежных средств на используемые сервисы Amazon.</div>
+
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_7.jpg" alt="Добавление тегов" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>На заключительной странице создания роли “Review” (Обзор) обязательно укажите имя роли, ознакомьтесь с настройками и нажмите кнопку “Create role” (Создать роль):</p>
+
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_8.jpg" alt="Проверка настроек создаваемой роли" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>Роль для считывания данных из сервиса Amazon S3 создана и добавлена в список ролей в IAM:</p>
+
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_9.jpg" alt="Созданная роль в перечне ролей IAM" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>Перейдите в созданную роль и сохраните её код ARN (Amazon Resource Name), который потребуется на шаге загрузки данных из корзины Amazon S3:</p>
+
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_10.jpg" alt="Код ARN - Amazon Resource Name" /><figcaption></figcaption></figure>
+  </li>
+</ol>
 
 
+
+   <!--  -->
 
     <div class="tags">
         
@@ -369,8 +426,8 @@ $('#toc').on('click', 'a', function() {
                 <div class="col-lg-12 footer">
                <!-- &copy;2021 Владимир Юсупов. Все права защищены. <br /> -->
                Основано на <a href="https://docs.aws.amazon.com/redshift/" target="_blank">документации AWS</a> <br />
- Последнее обновление: 22.06.2021 <br />
-<p><img src="images/logo.png" alt="Company logo"/></p>
+ Последнее обновление: 29.06.2021 <br />
+<p><a href="http://techwritex.github.io/" target="_blank"><img src="images/logo.png" alt="Технический писатель Владимир Юсупов"/></a></p>
                 </div>
             </div>
 </footer>

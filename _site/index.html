@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="Данное руководство основано на документации Amazon web services (AWS).">
 <meta name="keywords" content=" ">
-<title>Примеры оформления документации | Примеры технической документации</title>
+<title>Развёртывание хранилища данных на AWS | Пример технической документации</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -107,7 +107,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Техническая документация</span></a>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Пример технической документации</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -181,7 +181,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Примеры оформления документации page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Развёртывание хранилища данных на AWS page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li> -->
 
@@ -199,7 +199,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Примеры оформления документации">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Развёртывание хранилища данных на AWS">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -225,68 +225,76 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">Документация AWS </li>
+  <li class="sidebarTitle">Руководство разработчика </li>
   
   
   
   <li>
-      <a title="IAM" href="#">IAM</a>
-      <ul>
+      <!-- <a title="Создание пользователя" href="#">Создание пользователя</a> -->
+      <a title="Создание пользователя" href="/create-user.html">Создание пользователя</a>
+      <!-- <ul>
           
-          
-          
-          <li><a title="Создание пользователя" href="create-user.html">Создание пользователя</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="Создание роли для Redshift" href="create-role.html">Создание роли для Redshift</a></li>
-          
-          
-          
-          
-      </ul>
+      </ul> -->
    </li>
      
       
   
   <li>
-      <a title="S3" href="#">S3</a>
-      <ul>
+      <!-- <a title="Создание роли" href="#">Создание роли</a> -->
+      <a title="Создание роли" href="/create-role.html">Создание роли</a>
+      <!-- <ul>
           
-          
-          
-          <li><a title="Создание корзины" href="create-bucket.html">Создание корзины</a></li>
-          
-          
-          
-          
-      </ul>
+      </ul> -->
    </li>
      
       
   
   <li>
-      <a title="Redshift" href="#">Redshift</a>
-      <ul>
+      <!-- <a title="Создание корзины S3" href="#">Создание корзины S3</a> -->
+      <a title="Создание корзины S3" href="/create-s3-bucket.html">Создание корзины S3</a>
+      <!-- <ul>
           
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Создание кластера" href="#">Создание кластера</a> -->
+      <a title="Создание кластера" href="/create-cluster.html">Создание кластера</a>
+      <!-- <ul>
           
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Подключение к кластеру и выполнение запросов" href="#">Подключение к кластеру и выполнение запросов</a> -->
+      <a title="Подключение к кластеру и выполнение запросов" href="/run-queries.html">Подключение к кластеру и выполнение запросов</a>
+      <!-- <ul>
           
-          <li><a title="Создание кластера" href="create-cluster.html">Создание кластера</a></li>
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Загрузка данных из Amazon S3" href="#">Загрузка данных из Amazon S3</a> -->
+      <a title="Загрузка данных из Amazon S3" href="/load-data-from-s3.html">Загрузка данных из Amazon S3</a>
+      <!-- <ul>
           
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Удаление кластера" href="#">Удаление кластера</a> -->
+      <a title="Удаление кластера" href="/delete-cluster.html">Удаление кластера</a>
+      <!-- <ul>
           
-          
-          
-          
-          
-          <li><a title="Подключение к кластеру и выполнение запросов" href="run-queries.html">Подключение к кластеру и выполнение запросов</a></li>
-          
-          
-          
-          
-      </ul>
+      </ul> -->
    </li>
      
       
@@ -299,7 +307,8 @@
 </ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
+<!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
+<script>$("li.active").toggleClass("active");</script>
 
             </div>
             
@@ -308,13 +317,15 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Примеры оформления документации</h1>
+   <h1 class="post-title-main">Развёртывание хранилища данных на AWS</h1>
 </div>
 
 
 
 <div class="post-content">
 
+   
+    <div class="summary">Данное руководство основано на документации Amazon web services (AWS).</div>
    
 
     
@@ -343,9 +354,23 @@ $('#toc').on('click', 'a', function() {
     
 
 
-   <p>some text</p>
+   <h2 id="задача">Задача</h2>
+
+<p>Подготовка русскоязычного руководства по основным этапам разработки хранилищ данных (для учебных целей) на инфрастуктуре AWS с визуализацией выполнения каждого шага процесса.</p>
+
+<h2 id="основные-этапы-работы-над-документом">Основные этапы работы над документом</h2>
+
+<ol>
+  <li>Изучение исходной документации AWS.</li>
+  <li>Ознакомление с сервисами AWS, участвующими в процессе разработки хранилищ данных.</li>
+  <li>Выполнение всех шагов процесса.</li>
+  <li>Подготовка изображений и заметок.</li>
+  <li>Оформление документа в виде статического сайта.</li>
+</ol>
 
 
+
+   <!--  -->
 
     <div class="tags">
         
@@ -363,8 +388,8 @@ $('#toc').on('click', 'a', function() {
                 <div class="col-lg-12 footer">
                <!-- &copy;2021 Владимир Юсупов. Все права защищены. <br /> -->
                Основано на <a href="https://docs.aws.amazon.com/redshift/" target="_blank">документации AWS</a> <br />
- Последнее обновление: 22.06.2021 <br />
-<p><img src="images/logo.png" alt="Company logo"/></p>
+ Последнее обновление: 29.06.2021 <br />
+<p><a href="http://techwritex.github.io/" target="_blank"><img src="images/logo.png" alt="Технический писатель Владимир Юсупов"/></a></p>
                 </div>
             </div>
 </footer>

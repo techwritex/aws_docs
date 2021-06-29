@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="">
+<meta name="description" content="В разделе представлена последовательность шагов по соединению с кластером и выполнению sql-запросов с помощью встроенного редактора.">
 <meta name="keywords" content=" ">
-<title>Подключение к кластеру и выполнение запросов | Примеры технической документации</title>
+<title>Подключение к кластеру и выполнение запросов | Пример технической документации</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -107,7 +107,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Техническая документация</span></a>
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> Пример технической документации</span></a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
@@ -225,68 +225,76 @@
                 
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">Документация AWS </li>
+  <li class="sidebarTitle">Руководство разработчика </li>
   
   
   
   <li>
-      <a title="IAM" href="#">IAM</a>
-      <ul>
+      <!-- <a title="Создание пользователя" href="#">Создание пользователя</a> -->
+      <a title="Создание пользователя" href="/create-user.html">Создание пользователя</a>
+      <!-- <ul>
           
-          
-          
-          <li><a title="Создание пользователя" href="create-user.html">Создание пользователя</a></li>
-          
-          
-          
-          
-          
-          
-          <li><a title="Создание роли для Redshift" href="create-role.html">Создание роли для Redshift</a></li>
-          
-          
-          
-          
-      </ul>
+      </ul> -->
    </li>
      
       
   
   <li>
-      <a title="S3" href="#">S3</a>
-      <ul>
+      <!-- <a title="Создание роли" href="#">Создание роли</a> -->
+      <a title="Создание роли" href="/create-role.html">Создание роли</a>
+      <!-- <ul>
           
-          
-          
-          <li><a title="Создание корзины" href="create-bucket.html">Создание корзины</a></li>
-          
-          
-          
-          
-      </ul>
+      </ul> -->
    </li>
      
       
   
   <li>
-      <a title="Redshift" href="#">Redshift</a>
-      <ul>
+      <!-- <a title="Создание корзины S3" href="#">Создание корзины S3</a> -->
+      <a title="Создание корзины S3" href="/create-s3-bucket.html">Создание корзины S3</a>
+      <!-- <ul>
           
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Создание кластера" href="#">Создание кластера</a> -->
+      <a title="Создание кластера" href="/create-cluster.html">Создание кластера</a>
+      <!-- <ul>
           
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Подключение к кластеру и выполнение запросов" href="#">Подключение к кластеру и выполнение запросов</a> -->
+      <a title="Подключение к кластеру и выполнение запросов" href="/run-queries.html">Подключение к кластеру и выполнение запросов</a>
+      <!-- <ul>
           
-          <li><a title="Создание кластера" href="create-cluster.html">Создание кластера</a></li>
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Загрузка данных из Amazon S3" href="#">Загрузка данных из Amazon S3</a> -->
+      <a title="Загрузка данных из Amazon S3" href="/load-data-from-s3.html">Загрузка данных из Amazon S3</a>
+      <!-- <ul>
           
+      </ul> -->
+   </li>
+     
+      
+  
+  <li>
+      <!-- <a title="Удаление кластера" href="#">Удаление кластера</a> -->
+      <a title="Удаление кластера" href="/delete-cluster.html">Удаление кластера</a>
+      <!-- <ul>
           
-          
-          
-          
-          
-          <li class="active"><a title="Подключение к кластеру и выполнение запросов" href="run-queries.html">Подключение к кластеру и выполнение запросов</a></li>
-          
-          
-          
-          
-      </ul>
+      </ul> -->
    </li>
      
       
@@ -299,7 +307,8 @@
 </ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
+<!-- <script>$("li.active").parents('li').toggleClass("active");</script> -->
+<script>$("li.active").toggleClass("active");</script>
 
             </div>
             
@@ -315,6 +324,8 @@
 
 <div class="post-content">
 
+   
+    <div class="summary">В разделе представлена последовательность шагов по соединению с кластером и выполнению sql-запросов с помощью встроенного редактора.</div>
    
 
     
@@ -343,15 +354,84 @@ $('#toc').on('click', 'a', function() {
     
 
 
-   <h2 id="step-i">step I</h2>
+   <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Примечание:</b> встроенный редактор имеет ряд ограничений, поэтому для продуктивных данных рекомендуется использовать SQL-клиент, который поддерживает драйвера JDBC или ODBC. Тем не менее, для ознакомительных учебных целей возможностей встроенного редактора достаточно.</div>
 
-<p>some text</p>
+<ol>
+  <li>
+    <p>Войдите в консоль управления Amazon Redshift (если вышли из неё после выполнения предыдущего шага):</p>
 
-<h2 id="step-ii">step II</h2>
+    <p><a href="https://console.aws.amazon.com/redshift">https://console.aws.amazon.com/redshift</a></p>
+  </li>
+  <li>
+    <p>В левой навигационной панели выберите пункт “Editor” (Редактор), затем “Query editor” (Редактор запросов):</p>
 
-<p>some text</p>
+    <figure><img class="docimage" src="images/editor/editor_step_2.jpg" alt="Запуск редактора запросов" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>В окне “Connect to database” (Соединение с базой данных) укажите параметры, которые были указаны при создании кластера (<a href="/create-cluster.html">п.5 шага “Создание кластера”</a>) и нажмите кнопку “Connect to database” (Соединиться с базой данных):</p>
+
+    <figure><img class="docimage" src="images/editor/editor_step_3.jpg" alt="Соединение с базой данных" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>В открывшемся интерфейсе редактора из списка схем выберите “Public”:</p>
+
+    <figure><img class="docimage" src="images/editor/editor_step_4_1.jpg" alt="Выбор схемы" /><figcaption></figcaption></figure>
+
+    <figure><img class="docimage" src="images/editor/editor_step_4_2.jpg" alt="Выбор схемы" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>В редакторе запросов введите код создания таблицы “Cars” (Автомобили) и нажмите кнопку “Run” (Запустить):</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">create</span> <span class="k">table</span> <span class="n">cars</span><span class="p">(</span><span class="n">bodystyle</span> <span class="nb">varchar</span> <span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">model</span> <span class="nb">varchar</span><span class="p">(</span><span class="mi">20</span><span class="p">));</span>
+</code></pre></div>    </div>
+
+    <figure><img class="docimage" src="images/editor/editor_step_5_1.jpg" alt="Создание таблицы" /><figcaption></figcaption></figure>
+
+    <figure><img class="docimage" src="images/editor/editor_step_5_2.jpg" alt="Создание таблицы" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>Перед  вводом новой команды нажмите кнопку “Clear” (Очистить) для удаления предыдущего кода в поле ввода редактора.</p>
+  </li>
+  <li>
+    <p>Введите команду заполнения таблицы “Cars” (Автомобили) и нажмите кнопку “Run” (Запустить):</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">insert</span> <span class="k">into</span> <span class="n">cars</span> <span class="k">values</span> 
+ <span class="p">(</span><span class="s1">'Sedan'</span><span class="p">,</span> <span class="s1">'Nissan Versa'</span><span class="p">),</span>
+ <span class="p">(</span><span class="s1">'Sedan'</span><span class="p">,</span> <span class="s1">'Honda Civic'</span><span class="p">),</span>
+ <span class="p">(</span><span class="s1">'Sedan'</span><span class="p">,</span> <span class="s1">'Toyota Avalon'</span><span class="p">),</span>
+ <span class="p">(</span><span class="s1">'Coupe'</span><span class="p">,</span> <span class="s1">'Ford Mustang'</span><span class="p">),</span>
+ <span class="p">(</span><span class="s1">'Coupe'</span><span class="p">,</span> <span class="s1">'Porsche Boxster'</span><span class="p">),</span>
+ <span class="p">(</span><span class="s1">'Hatchback'</span><span class="p">,</span> <span class="s1">'Volkswagen Golf'</span><span class="p">),</span>
+ <span class="p">(</span><span class="s1">'Hatchback'</span><span class="p">,</span> <span class="s1">'Audi A7'</span><span class="p">),</span>
+ <span class="p">(</span><span class="s1">'SUV'</span><span class="p">,</span> <span class="s1">'Ford Expedition'</span><span class="p">),</span>
+ <span class="p">(</span><span class="s1">'SUV'</span><span class="p">,</span> <span class="s1">'Chevrolet Tahoe'</span><span class="p">);</span>
+</code></pre></div>    </div>
+
+    <figure><img class="docimage" src="images/editor/editor_step_7.jpg" alt="Заполнение таблицы" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>Для просмотра содержимого таблицы выполните следующий запрос:</p>
+
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="k">select</span> <span class="o">*</span> <span class="k">from</span> <span class="n">cars</span><span class="p">;</span>
+</code></pre></div>    </div>
+
+    <figure><img class="docimage" src="images/editor/editor_step_8_1.jpg" alt="Запрос данных" /><figcaption></figcaption></figure>
+
+    <figure><img class="docimage" src="images/editor/editor_step_8_2.jpg" alt="Запрос данных" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>Для выгрузки результатов в файл выберите нужный формат в меню “Export” (Экспорт):</p>
+
+    <figure><img class="docimage" src="images/editor/editor_step_9.jpg" alt="Выгрузка результатов в файл" /><figcaption></figcaption></figure>
+  </li>
+  <li>
+    <p>SQL-запросы с помощью встроенного редактора успешно выполняются.</p>
+  </li>
+</ol>
 
 
+
+   <!--  -->
 
     <div class="tags">
         
@@ -369,8 +449,8 @@ $('#toc').on('click', 'a', function() {
                 <div class="col-lg-12 footer">
                <!-- &copy;2021 Владимир Юсупов. Все права защищены. <br /> -->
                Основано на <a href="https://docs.aws.amazon.com/redshift/" target="_blank">документации AWS</a> <br />
- Последнее обновление: 22.06.2021 <br />
-<p><img src="images/logo.png" alt="Company logo"/></p>
+ Последнее обновление: 29.06.2021 <br />
+<p><a href="http://techwritex.github.io/" target="_blank"><img src="images/logo.png" alt="Технический писатель Владимир Юсупов"/></a></p>
                 </div>
             </div>
 </footer>
