@@ -26,31 +26,31 @@
   
   
   <url>
-    <loc>http://localhost:4000/aws_docs/create-s3-bucket.html</loc>
+    <loc>http://localhost:4000/create-s3-bucket.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/aws_docs/create-cluster.html</loc>
+    <loc>http://localhost:4000/create-cluster.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/aws_docs/create-role.html</loc>
+    <loc>http://localhost:4000/create-role.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/aws_docs/create-user.html</loc>
+    <loc>http://localhost:4000/create-user.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/aws_docs/delete-cluster.html</loc>
+    <loc>http://localhost:4000/delete-cluster.html</loc>
   </url>
   
   
@@ -62,13 +62,13 @@
   
   
   <url>
-    <loc>http://localhost:4000/aws_docs/load-data-from-s3.html</loc>
+    <loc>http://localhost:4000/load-data-from-s3.html</loc>
   </url>
   
   
   
   <url>
-    <loc>http://localhost:4000/aws_docs/run-queries.html</loc>
+    <loc>http://localhost:4000/run-queries.html</loc>
   </url>
   
   

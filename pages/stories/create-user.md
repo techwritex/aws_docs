@@ -1,7 +1,7 @@
 ---
 title: Создание пользователя
 sidebar: general_sidebar
-permalink: /aws_docs/create-user.html
+permalink: create-user.html
 folder: stories
 summary: "В разделе представлена последовательность шагов по созданию пользователя с полномочиями на чтение данных Amazon Redshift и выполению запросов с помощью встроенного редактора."
 ---

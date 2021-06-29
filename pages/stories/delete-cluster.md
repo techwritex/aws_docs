@@ -1,7 +1,7 @@
 ---
 title: Удаление кластера
 sidebar: general_sidebar
-permalink: /aws_docs/delete-cluster.html
+permalink: delete-cluster.html
 folder: stories
 summary: "В разделе представлена последовательность шагов по сохранению слепка и удалению кластера."
 ---

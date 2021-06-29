@@ -1,7 +1,7 @@
 ---
 title: Загрузка данных из Amazon S3
 sidebar: general_sidebar
-permalink: /aws_docs/load-data-from-s3.html
+permalink: load-data-from-s3.html
 folder: stories
 summary: "В разделе представлена последовательность шагов по загрузке данных корзины Amazon S3."
 ---

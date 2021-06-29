@@ -4,9 +4,9 @@
     <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="В разделе представлена последовательность шагов по созданию корзины (bucket) Amazon S3, которая будет использована в качестве источника для хранилища данных ...">
+<meta name="description" content="В разделе представлена последовательность шагов по созданию пользователя с полномочиями на чтение данных Amazon Redshift и выполению запросов с помощью встро...">
 <meta name="keywords" content=" ">
-<title>Создание корзины S3 | Пример технической документации</title>
+<title>Создание пользователя | Пример технической документации</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -181,7 +181,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Создание корзины S3 page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:?subject= feedback&body=I have some feedback about the Создание пользователя page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li> -->
 
@@ -199,7 +199,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Создание корзины S3">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Создание пользователя">{title}</a></li>',
                     noResultsText: 'No results found.',
                             limit: 10,
                             fuzzy: true,
@@ -231,7 +231,7 @@
   
   <li>
       <!-- <a title="Создание пользователя" href="#">Создание пользователя</a> -->
-      <a title="Создание пользователя" href="/aws_docs/create-user.html">Создание пользователя</a>
+      <a title="Создание пользователя" href="create-user.html">Создание пользователя</a>
       <!-- <ul>
           
       </ul> -->
@@ -241,7 +241,7 @@
   
   <li>
       <!-- <a title="Создание роли" href="#">Создание роли</a> -->
-      <a title="Создание роли" href="/aws_docs/create-role.html">Создание роли</a>
+      <a title="Создание роли" href="create-role.html">Создание роли</a>
       <!-- <ul>
           
       </ul> -->
@@ -251,7 +251,7 @@
   
   <li>
       <!-- <a title="Создание корзины S3" href="#">Создание корзины S3</a> -->
-      <a title="Создание корзины S3" href="/aws_docs/create-s3-bucket.html">Создание корзины S3</a>
+      <a title="Создание корзины S3" href="create-s3-bucket.html">Создание корзины S3</a>
       <!-- <ul>
           
       </ul> -->
@@ -261,7 +261,7 @@
   
   <li>
       <!-- <a title="Создание кластера" href="#">Создание кластера</a> -->
-      <a title="Создание кластера" href="/aws_docs/create-cluster.html">Создание кластера</a>
+      <a title="Создание кластера" href="create-cluster.html">Создание кластера</a>
       <!-- <ul>
           
       </ul> -->
@@ -271,7 +271,7 @@
   
   <li>
       <!-- <a title="Подключение к кластеру и выполнение запросов" href="#">Подключение к кластеру и выполнение запросов</a> -->
-      <a title="Подключение к кластеру и выполнение запросов" href="/aws_docs/run-queries.html">Подключение к кластеру и выполнение запросов</a>
+      <a title="Подключение к кластеру и выполнение запросов" href="run-queries.html">Подключение к кластеру и выполнение запросов</a>
       <!-- <ul>
           
       </ul> -->
@@ -281,7 +281,7 @@
   
   <li>
       <!-- <a title="Загрузка данных из Amazon S3" href="#">Загрузка данных из Amazon S3</a> -->
-      <a title="Загрузка данных из Amazon S3" href="/aws_docs/load-data-from-s3.html">Загрузка данных из Amazon S3</a>
+      <a title="Загрузка данных из Amazon S3" href="load-data-from-s3.html">Загрузка данных из Amazon S3</a>
       <!-- <ul>
           
       </ul> -->
@@ -291,7 +291,7 @@
   
   <li>
       <!-- <a title="Удаление кластера" href="#">Удаление кластера</a> -->
-      <a title="Удаление кластера" href="/aws_docs/delete-cluster.html">Удаление кластера</a>
+      <a title="Удаление кластера" href="delete-cluster.html">Удаление кластера</a>
       <!-- <ul>
           
       </ul> -->
@@ -316,7 +316,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <h1 class="post-title-main">Создание корзины S3</h1>
+   <h1 class="post-title-main">Создание пользователя</h1>
 </div>
 
 
@@ -324,7 +324,7 @@
 <div class="post-content">
 
    
-    <div class="summary">В разделе представлена последовательность шагов по созданию корзины (bucket) Amazon S3, которая будет использована в качестве источника для хранилища данных на Amazon Redshift.</div>
+    <div class="summary">В разделе представлена последовательность шагов по созданию пользователя с полномочиями на чтение данных Amazon Redshift и выполению запросов с помощью встроенного редактора.</div>
    
 
     
@@ -353,109 +353,62 @@ $('#toc').on('click', 'a', function() {
     
 
 
-   <ol>
-  <li>
-    <p>Войдите в консоль управления Amazon S3:</p>
+   <div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Важно:</b> предполагается, что у разработчика имеется учётная запись AWS для выполнения работ по развёртыванию хранилища данных с помощью инфраструктуры AWS. Если учётная запись отсутствует, сначала необходимо пройти регистрацию по ссылке <a href="https://portal.aws.amazon.com/billing/signup">https://portal.aws.amazon.com/billing/signup</a>, затем вернуться к данному руководству. Также политиками безопасности AWS настоятельно рекомендуется максимально сократить или запретить использование аккаунта с правами root, созданного при регистрации. Для работы с сервисами необходимо создать отдельных пользователей и/или группы пользователей и назначить им минимальные привелегии.</div>
 
-    <p><a href="https://console.aws.amazon.com/s3">https://console.aws.amazon.com/s3</a></p>
+<ol>
+  <li>
+    <p>Войдите в консоль управления AWS:</p>
+
+    <p><a href="https://console.aws.amazon.com/">https://console.aws.amazon.com/</a></p>
   </li>
   <li>
-    <p>Нажмите кнопку “Create bucket” (Создать корзину):</p>
+    <p>В списке сервисов найдите сервис управления доступом (IAM) или воспользуйтесь строкой поиска, а затем перейдите на домашнюю страницу сервиса IAM:</p>
 
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_2.jpg" alt="Создание корзины Amazon S3" /><figcaption></figcaption></figure>
+    <figure><img class="docimage" src="images/iam/role/aws_iam_step_1.jpg" alt="Поиск сервиса управления доступом IAM" /><figcaption></figcaption></figure>
   </li>
   <li>
-    <p>В разделе “General configuration” (Общие настройки) укажите имя корзины и регион расположения:</p>
+    <p>Перейдите в раздел “Users” (Пользователи) и выберите пользователя, которому планируете предоставить необходимые полномочия. Если пользователи отсутствуют, то создайте нового пользователя, нажав кнопку “Add user” (Добавить пользователя):</p>
 
-    <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Примечание:</b> требования к имени корзины: <br /> * уникальное в рамках сервиса Amazon S3 (представляйте имя корзины, как доменное имя),<br /> * минимальная длина имени 3 символа, <br /> * максимальная - 63 символа, <br /> * не содержит буквы в верхнем регистре, <br /> * состоит только из букв в нижнем регистре, цифр, точек (.) и дефисов (-), <br /> * начинается с буквы в нижнем регистре или цифры, <br /> * не имеет формат IP адреса (например, 192.168.5.4).</div>
-
-    <div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Важно:</b> после того, как корзина будет создана, её имя уже не может быть изменено.</div>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_3.jpg" alt="Общие настройки корзины Amazon S3" /><figcaption></figcaption></figure>
+    <figure><img class="docimage" src="images/iam/user/aws_editor_step_1.jpg" alt="Создание пользователя" /><figcaption></figcaption></figure>
   </li>
   <li>
-    <p>В разделе “Bucket settings for Block Public Access” (Настройки блокировки публичного доступа корзины) выберите вариант “Block all public access” (Публичный доступ к корзине и вложенным объектам полностью заблокирован):</p>
+    <p>Укажите значение поля “User name” (Имя пользователя). В настройках “Access type” (Тип доступа) выберите опцию “AWS Management Console access” (Доступ к консоли управления AWS). Создайте самостоятельно пароль или воспользуйтесь функцией автогенерации пароля. Далее нажмите кнопку перехода к разделу предоставлению полномочий “Next: Permissions”:</p>
 
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_4.jpg" alt="Публичный доступ заблокирован" /><figcaption></figcaption></figure>
+    <figure><img class="docimage" src="images/iam/user/aws_editor_step_2.jpg" alt="Настройки пользовтеля" /><figcaption></figcaption></figure>
+  </li>
+  <li>В разделе полномочий перейдите во вкладку “Attach existing policies directly” (Добавление существующих полномочий напрямую) и в поле поиска укажите следующие имена полномочий:
+    <ul>
+      <li>AmazonRedshiftQueryEditor (полномочия на редактор запросов Amazon Redshift),</li>
+      <li>AmazonRedshiftReadOnlyAccess (полномочия на чтение данных Amazon Redshift):</li>
+    </ul>
+
+    <figure><img class="docimage" src="images/iam/user/aws_editor_step_3.jpg" alt="Настройки пользовтеля" /><figcaption></figcaption></figure>
+
+    <figure><img class="docimage" src="images/iam/user/aws_editor_step_4.jpg" alt="AmazonRedshiftQueryEditor" /><figcaption></figcaption></figure>
+
+    <figure><img class="docimage" src="images/iam/user/aws_editor_step_5.jpg" alt="AmazonRedshiftReadOnlyAccess" /><figcaption></figcaption></figure>
   </li>
   <li>
-    <p>В разделе “Bucket Versioning” (Управление версиями корзины) выберите настройку для ведения версий объектов корзины. Данная настройка позволяет легко восстанавливать удаленные объекты в результате действий пользователя или же сбоев приложения. По-умолчанию версионность отключена:</p>
+    <p>После выбора полномочий нажмите кнопку “Next: Tags” для перехода к разделу добавления тегов:</p>
 
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_5.jpg" alt="Управление версиями корзины" /><figcaption></figcaption></figure>
+    <figure><img class="docimage" src="images/iam/user/aws_editor_step_6.jpg" alt="Выбранные полномочия" /><figcaption></figcaption></figure>
   </li>
   <li>
-    <p>Укажите необходимое количество тегов, которые состоят из ключей и значений. Например, ключ - environment (среда) и значение - development (разработка):</p>
+    <p>Укажите необходимое количество тегов, которые состоят из ключей и значений. Например, ключ - environment (среда) и значение - development (разработка). Нажмите кнопку “Next: Review” (или же пропустите шаг добавления тегов, сразу нажав кнопку “Next: Review”):</p>
 
     <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Примечание:</b> добавление тегов является необязательным действием. Однако, теги могут быть полезны во некоторых ситуациях. Например, с помощью них можно анализировать расходы денежных средств на используемые сервисы Amazon.</div>
 
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_6.jpg" alt="Добавление тегов" /><figcaption></figcaption></figure>
+    <figure><img class="docimage" src="images/iam/user/aws_editor_step_7.jpg" alt="Добавление тегов" /><figcaption></figcaption></figure>
   </li>
   <li>
-    <p>В разделе “Default encryption” (Шифрование) выберите значение “Disabled” (шифрование всех объектов корзины отключено):</p>
+    <p>Ознакомьтесь с настройками пользователя и нажмите кнопку “Create user” (Создать пользователя):</p>
 
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_7.jpg" alt="Настройки шифрования" /><figcaption></figcaption></figure>
+    <figure><img class="docimage" src="images/iam/user/aws_editor_step_8.jpg" alt="Обзор настройки пользователя" /><figcaption></figcaption></figure>
   </li>
   <li>
-    <p>Нажмите кнопку “Create bucket” (Создать корзину):</p>
+    <p>Пользователь с необходимыми полномочиями успешно создан. Сохраните файл с информацией для доступа (Download.csv) и/или отправьте её по электронной почте:</p>
 
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_8.jpg" alt="Создать корзину" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>Корзина успешно создана. Нажмите на ссылку в виде имени корзины для перехода в неё:</p>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_9.jpg" alt="Корзина S3 успешно создана" /><figcaption></figcaption></figure>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_10.jpg" alt="Корзина S3 успешно создана" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>Скачайте и распакуйте архив с файлами, подготовленными Amazon Web Services, по ссылке:</p>
-
-    <p><a href="https://docs.aws.amazon.com/redshift/latest/gsg/samples/tickitdb.zip">https://docs.aws.amazon.com/redshift/latest/gsg/samples/tickitdb.zip</a></p>
-  </li>
-  <li>
-    <p>Вернитесь в консоль Amazon S3, перейдите в созданную ранее корзину и нажмите кнопку “Upload” (Загрузить):</p>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_11.jpg" alt="Загрузка файлов в корзину S3" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>Выберите файлы, укажите полномочия “Read/Write” (Чтение/Запись) на загружаемые файлы и нажмите кнопку “Next” (Далее):</p>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_12.jpg" alt="Полномочия на файлы" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>Выберите класс хранения “One Zone-IA” (так как доступ к данным будет осуществляется относительно редко, но при этом должен обеспечиваться быстро) и нажмите кнопку “Next” (Далее):</p>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_13.jpg" alt="Выбор класса хранения" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>Проверьте выполненные настройки и нажмите кнопку “Upload” (Загрузить):</p>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_14.jpg" alt="Загрузка файлов" /><figcaption></figcaption></figure>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_14_2.jpg" alt="Загрузка файлов" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>В корзине создайте папку, в которую переместите загруженные файлы. Нажмите кнопку “Create folder” (Создать папку):</p>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_15.jpg" alt="Создание папки" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>Укажите имя папки “tickit”, тип шифрования оставьте по-умолчанию и нажмите кнопку “Save” (Сохранить):</p>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_16.jpg" alt="Создание папки" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>Отметьте загруженные файлы, из выпадающего меню “Actions” (Действия) выберите пункт “Move” (Переместить):</p>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_17.jpg" alt="Перемещение файлов в папку" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>Укажите путь перемещения файлов и нажмите кнопку “Choose” (Выбрать):</p>
-
-    <figure><img class="docimage" src="images/s3/aws_s3_bucket_step_18.jpg" alt="Перемещение файлов в папку" /><figcaption></figcaption></figure>
-  </li>
-  <li>
-    <p>Данные в корзине Amazon S3 для дальнейшей передачи их в Amazon Redshift успешно подготовлены.</p>
+    <figure><img class="docimage" src="images/iam/user/aws_editor_step_9.jpg" alt="Сохранение файла с информацией для доступа" /><figcaption></figcaption></figure>
   </li>
 </ol>
 
