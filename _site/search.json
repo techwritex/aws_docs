@@ -7,7 +7,7 @@
 "title": "Создание корзины S3",
 "tags": "",
 "keywords": "",
-"url": "create-s3-bucket.html",
+"url": "aws_docscreate-s3-bucket.html",
 "summary": "В разделе представлена последовательность шагов по созданию корзины (bucket) Amazon S3, которая будет использована в качестве источника для хранилища данных на Amazon Redshift."
 }
 ,
@@ -18,7 +18,7 @@
 "title": "Создание кластера",
 "tags": "",
 "keywords": "",
-"url": "create-cluster.html",
+"url": "aws_docscreate-cluster.html",
 "summary": "В разделе представлена последовательность шагов по созданию и настройке кластера Amazon Redshift."
 }
 ,
@@ -29,7 +29,7 @@
 "title": "Создание роли",
 "tags": "",
 "keywords": "",
-"url": "create-role.html",
+"url": "aws_docscreate-role.html",
 "summary": "В разделе представлена последовательность шагов по созданию роли для Amazon Redshift с помощью сервиса по управлению доступом (IAM). Обозначенная роль позволяет кластеру Amazon Redshift обращаться к сервису Amazon S3 для загрузки данных."
 }
 ,
@@ -40,7 +40,7 @@
 "title": "Создание пользователя",
 "tags": "",
 "keywords": "",
-"url": "create-user.html",
+"url": "aws_docscreate-user.html",
 "summary": "В разделе представлена последовательность шагов по созданию пользователя с полномочиями на чтение данных Amazon Redshift и выполению запросов с помощью встроенного редактора."
 }
 ,
@@ -51,7 +51,7 @@
 "title": "Удаление кластера",
 "tags": "",
 "keywords": "",
-"url": "delete-cluster.html",
+"url": "aws_docsdelete-cluster.html",
 "summary": "В разделе представлена последовательность шагов по сохранению слепка и удалению кластера."
 }
 ,
@@ -73,7 +73,7 @@
 "title": "Загрузка данных из Amazon S3",
 "tags": "",
 "keywords": "",
-"url": "load-data-from-s3.html",
+"url": "aws_docsload-data-from-s3.html",
 "summary": "В разделе представлена последовательность шагов по загрузке данных корзины Amazon S3."
 }
 ,
@@ -84,7 +84,7 @@
 "title": "Подключение к кластеру и выполнение запросов",
 "tags": "",
 "keywords": "",
-"url": "run-queries.html",
+"url": "aws_docsrun-queries.html",
 "summary": "В разделе представлена последовательность шагов по соединению с кластером и выполнению sql-запросов с помощью встроенного редактора."
 }
 ,

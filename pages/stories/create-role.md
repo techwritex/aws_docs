@@ -1,7 +1,7 @@
 ---
 title: Создание роли
 sidebar: general_sidebar
-permalink: create-role.html
+permalink: /aws_docs/create-role.html
 folder: stories
 summary: "В разделе представлена последовательность шагов по созданию роли для Amazon Redshift с помощью сервиса по управлению доступом (IAM). Обозначенная роль позволяет кластеру Amazon Redshift обращаться к сервису Amazon S3 для загрузки данных."
 ---

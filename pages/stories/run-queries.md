@@ -1,7 +1,7 @@
 ---
 title: Подключение к кластеру и выполнение запросов
 sidebar: general_sidebar
-permalink: run-queries.html
+permalink: /aws_docs/run-queries.html
 folder: stories
 summary: "В разделе представлена последовательность шагов по соединению с кластером и выполнению sql-запросов с помощью встроенного редактора."
 ---

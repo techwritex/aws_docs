@@ -1,7 +1,7 @@
 ---
 title: Создание корзины S3
 sidebar: general_sidebar
-permalink: create-s3-bucket.html
+permalink: /aws_docs/create-s3-bucket.html
 folder: stories
 summary: "В разделе представлена последовательность шагов по созданию корзины (bucket) Amazon S3, которая будет использована в качестве источника для хранилища данных на Amazon Redshift."
 ---

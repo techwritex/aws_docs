@@ -1,7 +1,7 @@
 ---
 title: Создание кластера
 sidebar: general_sidebar
-permalink: create-cluster.html
+permalink: /aws_docs/create-cluster.html
 folder: stories
 summary: "В разделе представлена последовательность шагов по созданию и настройке кластера Amazon Redshift."
 # simple_map: true
